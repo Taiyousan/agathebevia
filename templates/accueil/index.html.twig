@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AccueilController!{% endblock %}
+{% block title %}Agathe Bevia{% endblock %}
 
 {% block body %}
 {% for photo in photos %}
-<p>{{photo.img}}</p>
+<img src="{{ asset("img/#{photo.img}")}}" alt="" class="photo">
 {% endfor %}
 
 {% endblock %}
