@@ -149,6 +149,7 @@ body {
     height: 100vh;
     /* background-image : dans le accueil/index */
     background-position: center;
+    background-size: cover ;
   }
 
   .arrow-container {

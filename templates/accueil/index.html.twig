@@ -4,7 +4,7 @@
 
 {% block body %}
 
-<div class="home-landing" style="background-image: url('{{ asset("photos/photo5.jpg") }}');">
+<div class="home-landing" id="test" style="background-image: url('{{ asset("photos/photo5.jpg") }}');">
     <div class="arrow-container">
         <div class="left-container">
             <img src="{{ asset("img/arrow_left_white.png") }}" alt="">
@@ -19,18 +19,36 @@
 <img src="{{ asset("photos/#{photo.img}") }}" alt="" class="photo">
 {% endfor %}
 
-{% endblock %}
-
-{% block javascripts %}
 <script defer>
-const leftArrow = document.querySelector('.left-container');
-const rightArrow = document.querySelector('.right-container');
-const landing = document.querySelector('.home-landing');
+    const leftArrow = document.querySelector('.left-container');
+    const rightArrow = document.querySelector('.right-container');
+    const landing = document.querySelector('.home-landing');
+    const test = document.getElementById('test');
+    let compteurCarousel = 0;
 
-document.querySelector('.home-landing').addEventListener('click', function(){
-    let i = 0
-    console.log('ok')
-    this.style.backgroundImage = '{{ asset("photos/photo5.jpg") }}';
-})
+    console.log(test)
+    console.log('test')
+    rightArrow.addEventListener('click', function(){
+        if(compteurCarousel===0){
+            landing.style.backgroundImage = 'url({{ asset("photos/photo6.jpg") }})';
+        }if (compteurCarousel===1) {
+            landing.style.backgroundImage = 'url({{ asset("photos/photo14.jpg") }})';
+        } if (compteurCarousel===2) {
+            landing.style.backgroundImage = 'url({{ asset("photos/photo50.jpg") }})';
+        } if(compteurCarousel===3) {
+            landing.style.backgroundImage = 'url({{ asset("photos/photo6.jpg") }})';
+        }
+
+        if(compteurCarousel===3){
+            compteurCarousel=0;
+        }else{
+            compteurCarousel +=1;
+        }
+        
+        console.log(compteurCarousel)
+    })
 </script>
+
 {% endblock %}
+
+
