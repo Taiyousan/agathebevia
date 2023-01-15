@@ -3,8 +3,34 @@
 {% block title %}Agathe Bevia{% endblock %}
 
 {% block body %}
+
+<div class="home-landing" style="background-image: url('{{ asset("photos/photo5.jpg") }}');">
+    <div class="arrow-container">
+        <div class="left-container">
+            <img src="{{ asset("img/arrow_left_white.png") }}" alt="">
+        </div>
+        <div class="right-container">
+            <img src="{{ asset("img/arrow_right_white.png") }}" alt="">
+        </div>
+    </div>
+</div>
+
 {% for photo in photos %}
-{# <img src="{{ asset("img/#{photo.img}")}}" alt="" class="photo"> #}
+<img src="{{ asset("photos/#{photo.img}") }}" alt="" class="photo">
 {% endfor %}
 
+{% endblock %}
+
+{% block javascripts %}
+<script defer>
+const leftArrow = document.querySelector('.left-container');
+const rightArrow = document.querySelector('.right-container');
+const landing = document.querySelector('.home-landing');
+
+document.querySelector('.home-landing').addEventListener('click', function(){
+    let i = 0
+    console.log('ok')
+    this.style.backgroundImage = '{{ asset("photos/photo5.jpg") }}';
+})
+</script>
 {% endblock %}
