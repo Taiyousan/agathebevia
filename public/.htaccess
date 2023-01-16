@@ -1,2 +1,4 @@
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php [QSA,L]
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{REQUEST_URI} !
+RewriteRule ^(.*)$ https://agathebevia.fr/$1 [R=301,L]
