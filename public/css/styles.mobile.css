@@ -4,13 +4,21 @@
   padding: 0;
 }
 
+:root{
+  --font-title : 8vw;
+}
 
+@font-face {
+  font-family: mafont;
+  src: url(../fonts/branch.otf);
+}
+       
 
 
 body {
     background-color: #f9f9f9;
     overflow-x: hidden;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'mafont', sans-serif;
     
   }
   a {
@@ -139,6 +147,14 @@ body {
     transform: none;
   }
 
+  .navName {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    color: white;
+    font-size: var(--font-title);
+  }
+
   /* GALERIE */
 
   .photo {
@@ -178,3 +194,4 @@ body {
     display: flex;
     justify-content: center;
   }
+
