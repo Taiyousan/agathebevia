@@ -28,7 +28,7 @@ body {
     font-weight: 400;
     transition: 200ms;
   }
-  a:hover {
+  nav a:hover {
     opacity:0.5;
   }
   ul {
@@ -219,12 +219,9 @@ body {
 
   /* HOME MAIN */
   .home-menu {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
     
   }
 
@@ -254,7 +251,7 @@ body {
 }
 
 .category:hover p {
-  transform: translate(-70vw);
+  transform: translate(-30vw);
 }
 
 
@@ -275,4 +272,25 @@ body {
 }
 .category5 {
   background-image: url(../photos/photo65.jpg);
+}
+.category6 {
+  background-image: url(../photos/photo31.jpg);
+}
+.category7 {
+  background-image: url(../photos/photo56.jpg);
+}
+
+.separator-container {
+  width: 100vw;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.separator{
+  width: 30vw;
+  height: 1px;
+  background-color: black;
 }
