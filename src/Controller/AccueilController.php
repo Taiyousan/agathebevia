@@ -10,7 +10,7 @@ use App\Entity\Photo;
 
 class AccueilController extends AbstractController
 {
-    #[Route('/accueil', name: 'app_accueil')]
+    #[Route('/', name: 'app_accueil')]
     public function index(ManagerRegistry $doctrine): Response
     {
 
