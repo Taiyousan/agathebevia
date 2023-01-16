@@ -5,7 +5,7 @@ controllers:
     type: attribute
 
 homepage:
-    path: /accueil
+    path: /
     controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController::urlRedirectAction
     defaults:
         path: /accueil
