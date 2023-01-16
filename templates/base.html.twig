@@ -21,13 +21,30 @@
 
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
             <script src="{{ asset("js/home.js") }}" defer></script>
+            <script src="{{ asset("js/nav.js") }}" defer></script>
         {% endblock %}
     </head>
     <body>
         <header>
+            <div class="waviy">
+                    <span style="--i:1">A</span>
+                    <span style="--i:2">G</span>
+                    <span style="--i:3">A</span>
+                    <span style="--i:4">T</span>
+                    <span style="--i:5">H</span>
+                    <span style="--i:6">E</span>
+                    <span style="--i:7"> </span>
+                    <span style="--i:8">B</span>
+                    <span style="--i:9">E</span>
+                    <span style="--i:10">V</span>
+                    <span style="--i:11">I</span>
+                    <span style="--i:12">A</span>
+            </div>
             <nav role="navigation">
-                <div class="navName">AGATHE BEVIA</div>
+                {# <div class="navName">AGATHE BEVIA</div> #}
+                
             <div id="menuToggle">
                     <input type="checkbox" />
                     <span></span>

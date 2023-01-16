@@ -147,12 +147,33 @@ body {
     transform: none;
   }
 
-  .navName {
+  /* .navName {
     position: absolute;
-    right: 25px;
-    top: 10px;
+    right: 23vw;
+    top: 50vh;
     color: white;
+    font-size: 10vw;
+  } */
+
+  .waviy {
+    position: absolute;
+    right: 20px;
+    top: 80vh;
+    transition: 0.5s;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
     font-size: var(--font-title);
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s 1;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
   }
 
   /* GALERIE */
