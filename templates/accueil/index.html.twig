@@ -15,8 +15,29 @@
     </div>
 </div>
 
+<div class="home-menu">
+    <a class="category category1">
+        <p>Ete 2022</p>
+    </a>
+    <a class="category category2">
+        <p>Ete 2022</p>
+    </a>
+    <a class="category category3">
+        <p>Ete 2022</p>
+    </a>
+    <a class="category category4">
+        <p>Ete 2022</p>
+    </a>
+    <a class="category category5">
+        <p>Ete 2022</p>
+    </a>
+</div>
+
+
 {% for photo in photos %}
-<img src="{{ asset("photos/#{photo.img}") }}" alt="" class="photo">
+
+    <img src="{{ asset("photos/#{photo.img}") }}" alt="" class="photo">
+
 {% endfor %}
 
 <script defer>

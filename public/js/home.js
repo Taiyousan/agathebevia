@@ -10,3 +10,4 @@
 //     console.log('ok')
 //     landing.style.backgroundImage = 'url({{ asset("photos/photo6.jpg") }})';
 // })
+
