@@ -237,9 +237,9 @@ body {
   transition: 0.2s;
 }
 
-.category:hover {
-  background-size: 80%;
-}
+/* .category:hover {
+  background-size: 120%;
+} */
 
 .category p {
   margin-right: 25px;
@@ -250,9 +250,9 @@ body {
   /* background-color: rgba(0, 0, 0, 0.244); */
 }
 
-.category:hover p {
+/* .category:hover p {
   transform: translate(-30vw);
-}
+} */
 
 
 
