@@ -14,15 +14,14 @@ hamburger.addEventListener("click", () => {
         hamburgerline1.style.transform = "rotate(0deg) translate(0px, 0px)";
         hamburgerline3.style.transform = "rotate(0deg) translate(0px, 0px)";
         hamburgervolet.style.transform = "translateX(100%)";
-
         hamburger.classList.remove("hamburger--active");
     }
     else {
         //OUVERTURE
         hamburgerline2.style.opacity = 0;
-        hamburgerline1.style.transform = "rotate(45deg) translate(8px, 7px)";
-        hamburgerline3.style.transform = "rotate(-45deg) translate(5px, -5px)";
-        hamburgervolet.style.transform = "translateX(40%)";
+        hamburgerline1.style.transform = "rotate(45deg) translate(8px, 6px)";
+        hamburgerline3.style.transform = "rotate(-45deg) translate(6px, -5px)";
+        hamburgervolet.style.transform = "translateX(0%)";
         hamburger.classList.add("hamburger--active");
         
     }
