@@ -169,6 +169,10 @@ nav {
     opacity: 0;
 }
 
+.home-cat-voir a {
+    color: white;
+}
+
 /* FOOTER *********************************/
 .footer-row {
     height: 100px;
