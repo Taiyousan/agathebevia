@@ -13,7 +13,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> -->
 
         <link href="https://fonts.cdnfonts.com/css/helvetica-neue-9" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
                 
         
         <link rel="stylesheet" href="{{ asset('css/styles.mobile.css') }}">
@@ -33,25 +32,37 @@
     </head>
     <body>
         <header>
-            <nav>
-                <div class="nav-content">
-                    <div class="nav-title">
-                        <a href="{{ path('app_accueil') }}">
-                            <p>Agathe Bevia</p>
-                        </a>
-                    </div>
-                    <div class="nav-hamburger">
-                        <div class="hamburger">
-                            <div class="hamburger-line hamburger-line1"></div>
-                            <div class="hamburger-line hamburger-line2"></div>
-                            <div class="hamburger-line hamburger-line3"></div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            <div class="hamburger-volet">
-
+            
+            <nav role="navigation">
+                <!-- <div class="navName">AGATHE BEVIA</div> -->
+                <div class="waviy">
+                    <span style="--i:1">A</span>
+                    <span style="--i:2">G</span>
+                    <span style="--i:3">A</span>
+                    <span style="--i:4">T</span>
+                    <span style="--i:5">H</span>
+                    <span style="--i:6">E</span>
+                    <span style="--i:7"> </span>
+                    <span style="--i:8">B</span>
+                    <span style="--i:9">E</span>
+                    <span style="--i:10">V</span>
+                    <span style="--i:11">I</span>
+                    <span style="--i:12">A</span>
             </div>
+            <div id="menuToggle">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Info</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="{{path('admin')}}">Admin</a></li>
+                    </ul>
+            </div>
+          </nav>
         </header>
         {% block body %}{% endblock %}
     </body>

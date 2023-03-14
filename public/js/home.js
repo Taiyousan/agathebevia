@@ -1,22 +1,37 @@
-// animation au clic sur les catégories de l'accueil
+//LIENS ARGENTIQUE OU NUMERIQUE
+const lienLeft = document.querySelector('.home-cat-left');
+const lienRight = document.querySelector('.home-cat-right');
+const textLeft = document.querySelector('.home-cat-text-left');
+const textRight = document.querySelector('.home-cat-text-right');
+const voirLeft = document.querySelector('.home-cat-voir-left');
+const voirRight = document.querySelector('.home-cat-voir-right');
 
-const categories = document.querySelectorAll('.category');
-const menuCategorie = document.querySelector('.home-menu');
-
-categories.forEach(category => {
-category.addEventListener('click', function(){
-    // anim au click
-    category.querySelector('p').style.transform = "translate(-30vw)";
-    category.style.backgroundSize = "120%";
-
-    //anim reset si on clique ailleurs
-    menuCategorie.addEventListener('click', function(e){   
-        if (category.contains(e.target)){
-        } else{
-            category.querySelector('p').style.transform = "translate(0vw)";
-            category.style.backgroundSize = "100%";
-        }
-      });
+lienLeft.addEventListener('click', function(){
+    lienLeft.style.width = "60%";
+    lienRight.style.width = "40%";
+    lienRight.style.letterSpacing = "0";
+    lienRight.style.backdropFilter = "blur(8px)";
+    textLeft.style.opacity = "0";
+    textRight.style.opacity = "1";
+    voirRight.style.opacity = "0";
+    voirRight.style.bottom = "0"
+    setTimeout(function(){
+        voirLeft.style.opacity = "1";
+        voirLeft.style.bottom = "48%"
+    }, 200)
 })
-}
-)
+
+lienRight.addEventListener('click', function(){
+    lienLeft.style.width = "40%";
+    lienRight.style.width = "60%";
+    lienLeft.style.letterSpacing = "0";
+    textRight.style.opacity = "0";
+    textLeft.style.opacity = "1";
+    voirLeft.style.opacity = "0";
+    voirLeft.style.bottom = "0"
+
+    setTimeout(function(){
+        voirRight.style.opacity = "1";
+        voirRight.style.bottom = "48%"
+    }, 200)
+})

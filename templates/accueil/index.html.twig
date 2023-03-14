@@ -3,85 +3,15 @@
 {% block title %}Agathe Bevia{% endblock %}
 
 {% block body %}
-
-<div class="home-landing" id="test" style="background-image: url('{{ asset("photos/photo66.jpg") }}');">
-    <div class="arrow-container">
-        <div class="left-container">
-            <img src="{{ asset("img/arrow_left_white.png") }}" alt="">
-        </div>
-        <div class="right-container">
-            <img src="{{ asset("img/arrow_right_white.png") }}" alt="">
-        </div>
+<div class="home">
+    <div class="home-cat-left" style="background-image: url({{ asset("photos/photo55.jpg") }});">
+        <div class="home-cat-text home-cat-text-left">Argentique</div>
+        <div class="home-cat-voir home-cat-voir-left"><i class="fa-solid fa-arrow-left"></i></div>
     </div>
+    <div class="home-cat-right" style="background-image: url({{ asset("photos/photo56.jpg") }});">
+        <div class="home-cat-text home-cat-text-right">Numérique</div>
+        <div class="home-cat-voir home-cat-voir-right"><i class="fa-solid fa-arrow-right"></i></div>
+    </div>
+    <div></div>
 </div>
-<div class="separator-container">
-    <span class="separator"></span>
-</div>
-<div class="home-menu">
-    <a class="category category1">
-        <p>CROATIE ET SLOVENIE</p>
-    </a>
-    <a class="category category2">
-        <p>PORTUGAL</p>
-    </a>
-    <a class="category category3">
-        <p>SAINT-CYR</p>
-    </a>
-    <a class="category category4">
-        <p>STRASBOURG</p>
-    </a>
-    <a class="category category5">
-        <p>ETE 2022</p>
-    </a>
-    <a class="category category6">
-        <p>INTERRAIL 2022</p>
-    </a>
-    <a class="category category7">
-        <p>AUTRES</p>
-    </a>
-</div>
-<div class="separator-container">
-    <span class="separator"></span>
-</div>
-
-
-{# {% for photo in photos %}
-
-    <img src="{{ asset("photos/#{photo.img}") }}" alt="" class="photo">
-
-{% endfor %} #}
-
-<script defer>
-    const leftArrow = document.querySelector('.left-container');
-    const rightArrow = document.querySelector('.right-container');
-    const landing = document.querySelector('.home-landing');
-    const transitioner = document.querySelector('.transitioner');
-    const test = document.getElementById('test');
-    let compteurCarousel = 0;
-
-    console.log(test)
-    console.log('test')
-    rightArrow.addEventListener('click', function(){
-        
-        
-        if(compteurCarousel===0){
-        landing.style.backgroundImage = 'url({{ asset("photos/photo56.jpg") }})';
-        }if (compteurCarousel===1) {
-            landing.style.backgroundImage = 'url({{ asset("photos/photo6.jpg") }})';
-        } if (compteurCarousel===2) {
-            landing.style.backgroundImage = 'url({{ asset("photos/photo55.jpg") }})';
-        } if(compteurCarousel===3) {
-            landing.style.backgroundImage = 'url({{ asset("photos/photo66.jpg") }})';
-        }
-
-        if(compteurCarousel===3){
-            compteurCarousel=0;
-        }else{
-            compteurCarousel +=1;
-        }  
-    })
-</script>
-
 {% endblock %}
-
-

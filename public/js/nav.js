@@ -1,41 +1,32 @@
-const waviy = document.querySelector('.waviy');
+// Animation du hamburger menu
+// Hamburger to cross
 
-// ANIMATION TITRE
-    let isAnimationPlayed = false
+const hamburger = document.querySelector(".hamburger");
+const hamburgerline1 = document.querySelector(".hamburger-line1");
+const hamburgerline2 = document.querySelector(".hamburger-line2");
+const hamburgerline3 = document.querySelector(".hamburger-line3");
+const hamburgervolet = document.querySelector(".hamburger-volet");
 
-    const playAnimation = () =>
-    {
-        waviy.style.top = "2vh";
-        console.log('ok')
-        isAnimationPlayed = true
+hamburger.addEventListener("click", () => {
+    if(hamburger.classList.contains("hamburger--active")) {
+        //FERMETURE
+        hamburgerline2.style.opacity = 1;
+        hamburgerline1.style.transform = "rotate(0deg) translate(0px, 0px)";
+        hamburgerline3.style.transform = "rotate(0deg) translate(0px, 0px)";
+        hamburgervolet.style.transform = "translateX(100%)";
+
+        hamburger.classList.remove("hamburger--active");
+    }
+    else {
+        //OUVERTURE
+        hamburgerline2.style.opacity = 0;
+        hamburgerline1.style.transform = "rotate(45deg) translate(8px, 7px)";
+        hamburgerline3.style.transform = "rotate(-45deg) translate(5px, -5px)";
+        hamburgervolet.style.transform = "translateX(40%)";
+        hamburger.classList.add("hamburger--active");
         
     }
-
-    window.onscroll = () => !isAnimationPlayed && playAnimation()
-
-// DISPARITION TITRE
-    const mainGallery = document.querySelector('.main-gallery');
-
-    gsap.to(waviy, {
-        scrollTrigger : {
-            trigger : mainGallery,
-            start: "top top", // when the top of the trigger hits the top of the viewport
-            end: "+=500", // end after scrolling 500px beyond the start
-        },
-        opacity : 0
-    })
-
+});
     
 
-    window.addEventListener("scroll", () => {
-        const currentScroll = window.pageYOffset;
-        if (currentScroll <= 499) {
-            waviy.style.opacity = 1;
-            return;
-        }
-        if (currentScroll > 500) {
-            waviy.style.opacity = 0;
-            return;
-        }
-    }
-    )
+// --------------------------------------------------
