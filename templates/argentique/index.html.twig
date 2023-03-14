@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Argentique{% endblock %}
+
+
+
+{% block body %}
+
+<div class="photo-container photo-container-argentique">
+    {% for photo in photos|slice(0, 24) %}
+            <img src="{{ asset("photos/#{photo.img}") }}" alt="" class="photo">
+    {% endfor %}
+</div>
+
+<div class="modal">
+    <img src="" alt="" class="modal-img">
+</div>
+
+<div class="modal-close"><i class="fa fa-close"></i></div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/gallery.js') }}" defer></script>
+{% endblock %}
